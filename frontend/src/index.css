@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/* Interrogation room: painted institutional walls, carbon-copy transcript paper,
+   ballpoint ink, a highlighter for what the detective pins, red pen for what's lost. */
+@theme {
+  --color-wall: #3A4A43;
+  --color-wall-deep: #2B3832;
+  --color-wall-light: #52645B;
+  --color-paper: #EEF2F3;
+  --color-paper-shade: #DCE4E7;
+  --color-rule: #BFCBD1;
+  --color-ink: #1E2B4D;
+  --color-ink-soft: #46557A;
+  --color-graphite: #6E777C;
+  --color-highlight: #F4EA6E;
+  --color-redpen: #B0323F;
+
+  --font-type: "Courier Prime", "Courier New", ui-monospace, monospace;
+  --font-ui: "Archivo", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    background: var(--color-wall);
+    color: var(--color-paper);
+    font-family: var(--font-ui);
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-highlight);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Highlighter stroke: slightly ragged, wraps cleanly across lines. */
+  .marker {
+    background: linear-gradient(100deg, transparent 0.3em, color-mix(in srgb, var(--color-highlight) 85%, transparent) 0.5em, color-mix(in srgb, var(--color-highlight) 70%, transparent) calc(100% - 0.4em), transparent);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    padding: 0.05em 0.25em;
+    margin: 0 -0.25em;
+  }
+  /* Red-pen strike for lines that fell out of the detective's memory. */
+  .struck {
+    text-decoration-line: line-through;
+    text-decoration-color: color-mix(in srgb, var(--color-redpen) 75%, transparent);
+    text-decoration-thickness: 1.5px;
+    color: var(--color-graphite);
+    transition: color 200ms, text-decoration-color 200ms;
+  }
+  .ruled {
+    background-image: repeating-linear-gradient(to bottom, transparent 0, transparent calc(1.75rem - 1px), var(--color-rule) calc(1.75rem - 1px), var(--color-rule) 1.75rem);
+  }
+}
