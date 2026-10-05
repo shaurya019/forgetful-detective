@@ -148,3 +148,15 @@ frontend/
 Summarise dropped exchanges into a rolling "case notes" message instead of only archiving them; add a GSI on
 `created_at` instead of scanning for the case list; stream detective replies; add a hard mode where the suspect
 can't see the memory panel.
+
+
+
+
+
+<img width="1512" height="982" alt="Screenshot 2026-10-05 at 4 29 30 PM" src="https://github.com/user-attachments/assets/dc595f6e-fc22-4273-80fe-95dd24028c48" />
+<img width="1512" height="982" alt="Screenshot 2026-10-05 at 4 28 52 PM" src="https://github.com/user-attachments/assets/b87205dc-eba9-4646-9b9f-793b78f08c8b" />
+<img width="1512" height="982" alt="Screenshot 2026-10-05 at 4 28 45 PM" src="https://github.com/user-attachments/assets/add9ba91-c59c-4d6c-9a9b-082f48650cab" />
+<img width="1512" height="982" alt="Screenshot 2026-10-05 at 4 28 19 PM" src="https://github.com/user-attachments/assets/405a877a-5144-4f91-a0ea-7c285b1acbe3" />
+<img width="1512" height="982" alt="Screenshot 2026-10-05 at 4 28 09 PM" src="https://github.com/user-attachments/assets/36422851-5a4c-43ac-b73a-4add123c3a27" />
+<img width="1512" height="982" alt="Screenshot 2026-10-05 at 4 23 59 PM" src="https://github.com/user-attachments/assets/1035a5d7-3148-4341-9f4e-352614b3f4c7" />
+
